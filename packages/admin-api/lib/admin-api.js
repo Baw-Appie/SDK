@@ -60,7 +60,7 @@ module.exports = function GhostAdminAPI(options) {
                 url,
                 method,
                 params,
-                data,
+                data: method == 'GET' ? null : data,
                 headers,
                 maxContentLength: Infinity,
                 maxBodyLength: Infinity,
